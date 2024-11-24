@@ -2,9 +2,9 @@
 package software.ulpgc.dirty;
 
 import software.ulpgc.Pokemon.FilePokemonLoader;
-import software.ulpgc.clean.Pokemon;
+import software.ulpgc.Pokemon.Pokemon;
 import software.ulpgc.Pokemon.TsvPokemonDeserializer;
-import software.ulpgc.clean.ToggleChartCommand;
+import software.ulpgc.clean.TogglePokemonChartCommand;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -17,7 +17,7 @@ public class Main {
         File file = new File("src/main/resources/pokemon.csv");
         List<Pokemon> pokemons = new FilePokemonLoader(file, new TsvPokemonDeserializer()).load();
         MainFrame mainFrame = new MainFrame();
-        mainFrame.put("toggle", new ToggleChartCommand(mainFrame.barchartDisplay()));
+        mainFrame.put("toggle", new TogglePokemonChartCommand(mainFrame.piechartDisplay(),pokemons));
         mainFrame.setVisible(true);
     }
 }

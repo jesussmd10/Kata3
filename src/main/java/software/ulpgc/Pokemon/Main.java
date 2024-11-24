@@ -1,8 +1,6 @@
 
 package software.ulpgc.Pokemon;
 
-import software.ulpgc.clean.Pokemon;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;

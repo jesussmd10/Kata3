@@ -1,16 +1,14 @@
 
-package software.ulpgc.clean;
+package software.ulpgc.Pokemon;
 
 public class Pokemon {
     public final String pokemon;
     public final String type;
-    public final String type2;
     public int generationPokemon;
 
-    public Pokemon(String pokemon, String type, String type2, int generationPokemon) {
+    public Pokemon(String pokemon, String type, int generationPokemon) {
         this.pokemon = pokemon;
         this.type = type;
-        this.type2 = type2;
         this.generationPokemon = generationPokemon;
     }
 
@@ -25,9 +23,7 @@ public class Pokemon {
         return type;
     }
 
-    public String getType2() {
-        return type2;
-    }
+
 
     public int getGenerationPokemon() {
         return generationPokemon;
@@ -37,7 +33,6 @@ public class Pokemon {
     public String toString() {
         return "pokemon='" + pokemon + '\'' +
                 ", type=" + type +
-                ", type2=" + type2 +
                 ", generation=" + generationPokemon;
     }
 

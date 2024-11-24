@@ -29,8 +29,8 @@ public class Piechart {
         return this.counts.keySet();
     }
 
-    public void add(String key, int value) {
-        this.counts.put(key, value);
+    public void add(String key, Integer value) {
+         this.counts.put(key, value);
     }
 
 
